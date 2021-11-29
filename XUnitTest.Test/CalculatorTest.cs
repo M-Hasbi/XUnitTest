@@ -31,6 +31,11 @@ namespace XUnitTest.Test
             //Assert.True(5>2);
             //Assert.False(5<1);
 
+            //var regex = "^dog";
+            //Assert.Matches(regex,"dog cat mouse");
+            //Assert.DoesNotMatch(regex, "dog cat mouse");
+
+
             //Assert.Contains("Hasbi","Mehmet Hasbi Kaynak");
             //Assert.DoesNotContain("Said", "Mehmet Hasbi Kaynak");
         }
