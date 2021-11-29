@@ -35,6 +35,17 @@ namespace XUnitTest.Test
             //Assert.Matches(regex,"dog cat mouse");
             //Assert.DoesNotMatch(regex, "dog cat mouse");
 
+            //Assert.StartWith("Mehmet","Mehmet Hasbi Kaynak");
+            //Assert.EndWith("Mehmet","Mehmet Hasbi Kaynak");
+
+            //Assert.Single(new List<string>() {"Hasbi"});
+
+            //Assert.IsType<string>("hasbi");
+            //Assert.IsNotType<int>(1);
+
+            //Assert.InRange(10,2,20);
+            //Assert.NotInRange(10,2,20)
+
 
             //Assert.Contains("Hasbi","Mehmet Hasbi Kaynak");
             //Assert.DoesNotContain("Said", "Mehmet Hasbi Kaynak");
