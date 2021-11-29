@@ -10,6 +10,11 @@ namespace XUnitTest.Test
 {
     public class CalculatorTest
     {
+        public Calculator calculator { get; set; }
+        public CalculatorTest()
+        {
+            this.calculator = new Calculator();
+        }
         [Fact]
         public void AddTest()
         {
@@ -17,7 +22,7 @@ namespace XUnitTest.Test
 
             int a = 5;
             int b = 20;
-            var calculator = new Calculator();
+
 
             //Act --> calling the method which is going to be tested
             var total = calculator.Add(a, b);
@@ -31,7 +36,6 @@ namespace XUnitTest.Test
         [InlineData(10, 15, 25)]
         public void AddTest2(int a, int b, int expectedTotal)
         {
-            var calculator = new Calculator();
             var actualTotal = calculator.Add(a, b);
             Assert.Equal(expectedTotal, actualTotal);
         }
