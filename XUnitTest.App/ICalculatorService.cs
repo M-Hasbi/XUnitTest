@@ -9,5 +9,7 @@ namespace XUnitTest.App
     public interface ICalculatorService
     {
         int Add(int a, int b);
+
+        int Multiple(int a, int b);
     }
 }

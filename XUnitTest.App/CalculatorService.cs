@@ -16,5 +16,10 @@ namespace XUnitTest.App
             }
             return a + b;
         }
+
+        public int Multiple(int a, int b)
+        {
+            return a * b;
+        }
     }
 }
