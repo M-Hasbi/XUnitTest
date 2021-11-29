@@ -13,43 +13,27 @@ namespace XUnitTest.Test
         [Fact]
         public void AddTest()
         {
-            ////Arrange --> initiliazing the required paramethers 
+            //Arrange --> initiliazing the required paramethers 
 
-            //int a = 5;
-            //int b = 20;
-            //var calculater = new Calculator();
+            int a = 5;
+            int b = 20;
+            var calculator = new Calculator();
 
-            ////Act --> calling the method which is going to be tested
-            //var total = calculater.Add(a, b);
+            //Act --> calling the method which is going to be tested
+            var total = calculator.Add(a, b);
 
-            ////Assert --> the testing method
-            //Assert.Equal<int>(25, total);
+            //Assert --> the testing method
+            Assert.Equal<int>(25, total);
 
-            //var names = new List<string>() { "Mehmet", "Hasbi", "Kaynak" };
-            //Assert.Contains(names, x => x == "Kaynak");
-
-            //Assert.True(5>2);
-            //Assert.False(5<1);
-
-            //var regex = "^dog";
-            //Assert.Matches(regex,"dog cat mouse");
-            //Assert.DoesNotMatch(regex, "dog cat mouse");
-
-            //Assert.StartWith("Mehmet","Mehmet Hasbi Kaynak");
-            //Assert.EndWith("Mehmet","Mehmet Hasbi Kaynak");
-
-            //Assert.Single(new List<string>() {"Hasbi"});
-
-            //Assert.IsType<string>("hasbi");
-            //Assert.IsNotType<int>(1);
-
-            //Assert.InRange(10,2,20);
-            //Assert.NotInRange(10,2,20)
-
-
-            //Assert.Contains("Hasbi","Mehmet Hasbi Kaynak");
-            //Assert.DoesNotContain("Said", "Mehmet Hasbi Kaynak");
         }
-
+        [Theory]
+        [InlineData(5, 20, 25)]
+        [InlineData(10, 15, 25)]
+        public void AddTest2(int a, int b, int expectedTotal)
+        {
+            var calculator = new Calculator();
+            var actualTotal = calculator.Add(a, b);
+            Assert.Equal(expectedTotal, actualTotal);
+        }
     }
 }
